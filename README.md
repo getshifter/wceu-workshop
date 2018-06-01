@@ -8,6 +8,7 @@ Docker + WordPress Workshop
 ### Preparations
 
 - [Install Docker](https://docs.docker.com/install/#supported-platforms)
+- [Install Docker Compose](https://docs.docker.com/compose/install/)
 - Clone this [repo](https://github.com/getshifter/wceu-workshop)
 - If running, shut down the following: MAMP, WAMP, VVV, etc.
 - Check to see if Docker is running with command `docker`:
