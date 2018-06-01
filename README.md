@@ -46,3 +46,13 @@ In this instance the command `docker pull` will make a request to download a con
 | `docker-compose restart` | Restart services                               |
 | `docker-compose kill`    | Force stop service containers                  |
 | `docker-compose up -d --force-recreate` | Force recreate containers       |
+
+## Workshop Guide
+
+1. Install and check requirements
+2. Clone this repo
+3. CD into project
+4. Run build: `docker-compose up -d`
+5. View in browser `localhost:8000`
+6. Install a plugin, any plugin
+7. Navigate to local directory to view local files within Docker container
