@@ -34,6 +34,22 @@ The official directory for container listings is [Docker Hub](https://hub.docker
 
 In this instance the command `docker pull` will make a request to download a container from Docker Hub. It will store that container on your local machine for later use.
 
+## Names
+
+### Container vs Image vs Service
+
+#### Image
+
+tk
+
+#### Container
+
+tk
+
+#### Service
+
+tk
+
 ## Quick Tips
 
 ### Useful Docker Commands
@@ -43,9 +59,22 @@ In this instance the command `docker pull` will make a request to download a con
 | `docker-compose ps`      | List Containers                                |
 | `docker-compose up -d`   | Create and start containers with detached flag |
 | `docker-compose stop`    | Stop running containers                        |
+| `docker-compose rmi`     | Remove container images                        |
 | `docker-compose restart` | Restart services                               |
 | `docker-compose kill`    | Force stop service containers                  |
 | `docker-compose up -d --force-recreate` | Force recreate containers       |
+| `docker rm -f $(docker ps -a -q)` | Remove all containers                 |
+| `docker stop $(docker ps -a -q)` | Stop all containers                    |
+| `docker rmi -f $(docker images -q)` | Delete all images                   |
+| `docker system prune --all` | Remove unused images                        |
+| `docker volume rm $(docker volume ls -qf dangling=true)` | Remove volumes |
+
+### Workflow Example
+
+1. `docker-compose up -d`
+2. `docker-compose stop`
+3. `docker rm -f $(docker ps -a -q)`
+4. `docker volume rm $(docker volume ls -qf dangling=true)`
 
 ## Workshop Guide
 

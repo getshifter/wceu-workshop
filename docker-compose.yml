@@ -11,9 +11,10 @@ services:
     volumes:
       - ./config/php.conf.uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
       # - ./wp-app:/var/www/html
-      - ./wp-content/themes:/var/www/html/wp-content/themes
-      - ./wp-content/plugins:/var/www/html/wp-content/plugins
-      - ./wp-content/uploads:/var/www/html/wp-content/uploads
+      # - ./wp-content/themes:/var/www/html/wp-content/themes
+      # - ./wp-content/plugins:/var/www/html/wp-content/plugins
+      # - ./wp-content/uploads:/var/www/html/wp-content/uploads
+      - ./wp-content:/var/www/html/wp-content
     restart: always
     environment:
       WORDPRESS_DB_HOST: db:3306
