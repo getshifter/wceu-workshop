@@ -10,11 +10,7 @@ services:
       - "8000:80"
     volumes:
       - ./config/php.conf.uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
-      # - ./wp-app:/var/www/html
-      # - ./wp-content/themes:/var/www/html/wp-content/themes
-      # - ./wp-content/plugins:/var/www/html/wp-content/plugins
-      # - ./wp-content/uploads:/var/www/html/wp-content/uploads
-      - ./wp-content:/var/www/html/wp-content
+      - ./app/wp-content:/var/www/html/wp-content
     restart: always
     environment:
       WORDPRESS_DB_HOST: db:3306
@@ -22,9 +18,9 @@ services:
       WORDPRESS_DB_PASSWORD: wordpress
   
   db:
-    image: mysql:5.7
+    image: mariadb:latest
     volumes:
-      - db_data:/var/lib/mysql
+      - ./app/db:/var/lib/mysql
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
@@ -32,5 +28,19 @@ services:
       MYSQL_USER: wordpress
       MYSQL_PASSWORD: wordpress
 
+  mailhog:
+    image: mailhog/mailhog
+    ports:
+      - 8025:8025
+  
+  mailcatcher:
+    image: schickling/mailcatcher
+    restart: always
+    ports:
+      - "1025:1025"
+      - "1080:1080"
+    environment:
+      MAILCATCHER_PORT: 1025
+
 volumes:
-    db_data:
+    db:
