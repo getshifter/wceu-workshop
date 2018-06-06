@@ -1,0 +1,8 @@
+version: '3.3'
+
+services:
+ 
+  hello-world:
+    image: nginx
+    ports:
+      - "8010:80"
