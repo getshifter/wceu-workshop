@@ -3,7 +3,8 @@
 Docker + WordPress Workshop
 
 - Hosted by [Daniel Olson](https://twitter.com/emaildano)
-- In collabration with [Shifter](https://getshifter.io)
+- Assisted by Zach Gieske
+- In collab with [Shifter](https://getshifter.io)
 
 ### Preparations
 
