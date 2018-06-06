@@ -28,19 +28,19 @@ services:
       MYSQL_USER: wordpress
       MYSQL_PASSWORD: wordpress
 
-  mailhog:
-    image: mailhog/mailhog
-    ports:
-      - 8025:8025
+  # mailhog:
+  #   image: mailhog/mailhog
+  #   ports:
+  #     - 8025:8025
   
-  mailcatcher:
-    image: schickling/mailcatcher
-    restart: always
-    ports:
-      - "1025:1025"
-      - "1080:1080"
-    environment:
-      MAILCATCHER_PORT: 1025
+  # mailcatcher:
+  #   image: schickling/mailcatcher
+  #   restart: always
+  #   ports:
+  #     - "1025:1025"
+  #     - "1080:1080"
+  #   environment:
+  #     MAILCATCHER_PORT: 1025
 
 volumes:
     db:
