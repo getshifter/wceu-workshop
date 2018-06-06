@@ -23,6 +23,17 @@ $ docker
   A self-sufficient runtime for containers
 ```
 
+```
+$ danielolson : ~/dev/wceu-workshop
+$ docker-compose
+  
+  Define and run multi-container applications with Docker.
+
+  Usage:
+    docker-compose [-f <arg>...] [options] [COMMAND] [ARGS...]
+    docker-compose -h|--help
+```
+
 ## Quick Tips
 
 ### Useful Docker Commands
@@ -36,25 +47,16 @@ $ docker
 | `docker-compose restart` | Restart services                               |
 | `docker-compose kill`    | Force stop service containers                  |
 | `docker-compose up -d --force-recreate` | Force recreate containers       |
-| `docker rm -f $(docker ps -a -q)` | Remove all containers                 |
 | `docker stop $(docker ps -a -q)` | Stop all containers                    |
+| `docker rm -f $(docker ps -a -q)` | Remove all containers                 |
 | `docker rmi -f $(docker images -q)` | Delete all images                   |
 | `docker system prune --all` | Remove unused images                        |
 | `docker volume rm $(docker volume ls -qf dangling=true)` | Remove volumes |
 
-### Workflow Example
+### Cleanup
 
-1. `docker-compose up -d`
-2. `docker-compose stop`
-3. `docker rm -f $(docker ps -a -q)`
-4. `docker volume rm $(docker volume ls -qf dangling=true)`
-
-## Workshop Guide
-
-1. Install and check requirements
-2. Clone this repo
-3. CD into project
-4. Run build: `docker-compose up -d`
-5. View in browser `localhost:8000`
-6. Install a plugin, any plugin
-7. Navigate to local directory to view local files within Docker container
+| Commands                 | Description                                    |
+| ------------------------ | ---------------------------------------------- |
+| `docker stop $(docker ps -a -q)` | Stop all containers                    |
+| `docker rm -f $(docker ps -a -q)` | Remove all containers                 |
+| `docker volume rm $(docker volume ls -qf dangling=true)` | Remove volumes |
