@@ -1,6 +1,4 @@
-# Hello World
-
-## WCEU Docker + WordPress Workshop
+# Docker Compose: Hello World
 
 A simple example of a single container using Docker Compose.
 
