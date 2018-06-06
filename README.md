@@ -34,6 +34,12 @@ $ docker-compose
     docker-compose -h|--help
 ```
 
+### Workshop ToC
+
+1. [Docker: Hello World](examples/1-docker-hello-world)
+2. [Docker Compose: Hello World](examples/1-docker-compose-hello-world)
+3. [Docker Compose: WordPress](examples/1-docker-compose-wordpress)
+
 ## Quick Tips
 
 ### Useful Docker Commands
