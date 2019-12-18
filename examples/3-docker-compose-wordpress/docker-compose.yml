@@ -28,5 +28,8 @@ services:
       MYSQL_USER: wordpress
       MYSQL_PASSWORD: wordpress
 
+  git:
+    image: alpine/git:latest
+
 volumes:
     db:
